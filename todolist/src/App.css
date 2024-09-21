@@ -3,3 +3,125 @@
   height: 50px;
   border: 1px solid lightblue;
 }
+
+/* 전체 페이지 스타일 */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 메인 컨테이너 스타일 */
+main {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 상단부터 배치 */
+  gap: 20px; /* 아이템들 간에 간격 추가 */
+  align-items: center; /* 아이템들을 수평 가운데 정렬 */
+}
+
+/* 입력 필드와 버튼을 감싸는 div */
+.input-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px; /* 입력 필드와 버튼 사이 간격 추가 */
+}
+
+/* Todo 리스트를 감싸는 div 스타일 */
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; /* 네모 상자들을 중앙에 정렬 */
+}
+
+/* Todo List 제목 (h1) 스타일 */
+.todo-list-title {
+  text-align: center; /* 제목을 가운데 정렬 */
+  font-size: 32px; /* 글자를 크게 설정 */
+  font-weight: bold; /* 글자를 굵게 설정 */
+  margin-bottom: 20px; /* 제목과 리스트 사이에 간격 */
+  color: #333; /* 적당한 색상 설정 */
+}
+
+
+
+/* Todo 리스트 항목 (todo-item) */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  max-width: 100%; /* 항목의 최대 너비를 100%로 설정 */
+  width: auto; /* 너비를 글자 길이에 맞춰 유동적으로 설정 */
+  min-width: 300px; /* 최소 너비 설정 */
+}
+
+
+/* 입력 필드 스타일 */
+input[type="text"] {
+  width: 70%; /* 버튼보다 넓게 */
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #764ba2;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #667eea;
+}
+
+/* 추가 버튼 스타일 */
+button {
+  background: #667eea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #764ba2;
+}
+
+
+
+.todo-item:hover {
+  transform: scale(1.05);
+}
+
+/* 삭제 버튼 스타일 */
+.todo-item button {
+  background: #ff6b6b;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item button:hover {
+  background: #ff4757;
+}
